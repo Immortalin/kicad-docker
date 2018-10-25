@@ -38,7 +38,7 @@ RUN CFLAGS=-Wno-format-security python build-wxpython.py --install --no_wxbuild 
 WORKDIR /tmp
 RUN git clone https://github.com/KiCad/kicad-source-mirror.git
 WORKDIR ./kicad-source-mirror
-RUN git checkout ${KICAD_COMMIT:-5.0.0}
+RUN git checkout ${KICAD_COMMIT:-5.0.1}
 WORKDIR ./scripts
 RUN chmod +x get_libngspice_so.sh
 RUN ./get_libngspice_so.sh && ./get_libngspice_so.sh install
